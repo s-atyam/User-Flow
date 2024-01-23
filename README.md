@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# MERN Stack User Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple User Management application built using the MERN (MongoDB, Express.js, React, Node.js) stack. The application allows users to sign up, log in, and perform basic CRUD operations on user records.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- User signup and login functionality.
+- CRUD operations for managing user records.
+- Responsive UI design for a seamless user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
 
-### `npm test`
+- **Frontend:** React.js
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JSON Web Tokens (JWT)
+- **Styling:** CSS, Tailwindcss
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Local Setup
 
-### `npm run build`
+### Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone git@github.com:s-atyam/User-Flow.git
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Create a `.env` file in the frontend root directory:
 
-### `npm run eject`
+    ```env
+    REACT_APP_HOST=http://localhost:5000
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install dependencies and start the frontend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm install
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Access the application at `http://localhost:3000` in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Backend
 
-## Learn More
+1. Change directory to Backend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    cd Backend
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Create a `.env` file in the backend root directory:
 
-### Code Splitting
+    ```env
+    JWT_SECRET=your_jwt_secret
+    MONGO_URI=your_mongodb_connection_string
+    PORT=5000
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Replace `your_jwt_secret` and `your_mongodb_connection_string` with your actual JWT secret key and MongoDB connection string.
 
-### Analyzing the Bundle Size
+3. Install dependencies and start the backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    ```bash
+    npm install
+    npm start
+    ```
 
-### Making a Progressive Web App
+4. The backend server will run at `http://localhost:5000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Usage
 
-### Advanced Configuration
+### 1. Signup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Fill in the required fields on the signup screen and click "Save" to create a new user.
 
-### Deployment
+### 2. Login
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Use your registered email and password to log in.
+- Upon successful login, you will be directed to the dashboard.
 
-### `npm run build` fails to minify
+### 3. Dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- View a list of users with their username, email, and phone in card items.
+- Perform CRUD operations on user records.
+
+## Contributing
+
+If you would like to contribute to the development of this User Management System, feel free to open issues, submit pull requests, or provide feedback.
