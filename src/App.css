@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+:root {
+  --bright-red: #DE354C;
+  --deep-red: #932432;
+  --purple: #3C1874;
+  --purple-gray: #283747;
+  --cloud: #e0e0e0;
+  --gray-color: #757575;
+  --light-gray-color: #bfbfbf;
+  --dark-gray-color: #474747;
+  --white-color: #ffffff;
+  --black-color: #030303;
+}
+
+/* scroll bar CSS */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--cloud);
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-gray-color);
+  border-radius: 10px;
+}
+
+
+/* containers css */
+.main_container_1{
+  @apply w-screen h-screen
+}
+.main_container_2{
+  @apply w-11/12 md:w-5/6 h-fit
+}
+.main_container_3{
+  @apply w-4/5 sm:w-3/5 md:w-2/5 h-fit md:h-5/6 m-4 py-6 md:py-0
+}
+.main_container_fit{
+  @apply w-4/5 h-fit m-4 p-4
+}
+.main_container_1, .main_container_2, .main_container_3, .main_container_fit{
+  background-color: var(--cloud);
+}
+
+/* headings css */
+.heading_1{
+  @apply text-3xl sm:text-4xl md:text-5xl font-light py-1
+}
+.heading_2{
+  @apply text-2xl sm:text-3xl font-normal
+}
+.heading_3{
+  @apply sm:text-lg font-normal
+}
+.heading_1, .heading_2, .heading_3{
+  color: var(--dark-gray-color);
+}
+
+/* flex css */
+.flex_center{
+  @apply flex justify-center items-center
+}
+.flex_between{
+  @apply flex justify-between items-center
+}
+.flex_center{
+  @apply flex justify-center items-center
+}
+.flex_evenly{
+  @apply flex justify-evenly items-center
+}
+
+/* button css */
+.button_1{
+  @apply px-3 py-1 mr-4 border-2 border-slate-700 rounded-full text-sm md:text-base font-medium text-slate-700
+}
+.button_1:hover{
+  @apply bg-slate-700 text-white
+}
+.button_2{
+  @apply px-3 py-1 mr-4 rounded-full font-medium text-slate-200 text-sm md:text-base bg-slate-700 border-2 border-slate-700
+}
+.button_2:hover{
+  @apply text-slate-700 bg-slate-200 border-2
+}
+.button_3{
+  @apply w-36 py-2 border-2 border-slate-700 rounded-sm text-sm md:text-base font-medium text-slate-700
+}
+.button_3:hover{
+  @apply text-slate-700 bg-gray-400 border-2
+}
+
+
+.para_1{
+  @apply text-gray-600 font-normal text-sm md:text-base
+}
+
+span{
+  color: var(--bright-red);
+}
+
+.mobile_hide{
+  @apply hidden sm:flex
+}
+.tab_hide{
+  @apply hidden lg:flex
+}
